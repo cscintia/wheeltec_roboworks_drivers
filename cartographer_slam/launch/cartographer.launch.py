@@ -9,11 +9,11 @@ def generate_launch_description():
     pkg_share = FindPackageShare(package='cartographer_slam').find('cartographer_slam')
     
     # Configure node launch information 
-    use_sim_time = LaunchConfiguration('use_sim_time', default='true')
+    use_sim_time = LaunchConfiguration('use_sim_time', default='false')
     # Map resolution
     resolution = LaunchConfiguration('resolution', default='0.05')
     # Map publish period  
-    publish_period_sec = LaunchConfiguration('publish_period_sec', default='1.0')
+    publish_period_sec = LaunchConfiguration('publish_period_sec', default='0.05')
     # Configuration file folder path
     configuration_directory = LaunchConfiguration('configuration_directory',default= os.path.join(pkg_share, 'config') )
     # Configuration file
